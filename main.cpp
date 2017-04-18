@@ -1,6 +1,7 @@
 #include <iostream>
 #include "tree/ArrayTree.h"
 #include "tree/LinkedTree.h"
+#include "search/Search.h"
 
 int main() {
     std::cout << "Hello, World!" << std::endl;
@@ -51,5 +52,13 @@ int main() {
     linkedTree->inOrderTraversal();
     linkedTree->postOrderTraversal();
     delete linkedTree;
+
+    /**
+     * 测试查找
+     */
+
+    int a[10] = {0, 3, 5, 8, 11, 33, 78, 96, 114, 238};
+    std::cout << Search::sequentialSearch(a, 10, 33) << std::endl;
+    std::cout << Search::optimizeSequentialSearch(a, 10, 33) << std::endl;
     return 0;
 }

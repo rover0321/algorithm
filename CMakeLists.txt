@@ -1,7 +1,15 @@
-cmake_minimum_required(VERSION 3.6)
-project(CPP)
+cmake_minimum_required(VERSION 3.7)
+project(algorithm)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp tree/ArrayTree.cpp tree/ArrayTree.h tree/LinkedTree.cpp tree/LinkedTree.h tree/BinTreeNode.cpp tree/BinTreeNode.h)
-add_executable(CPP ${SOURCE_FILES})
+set(SOURCE_FILES
+        tree/ArrayTree.cpp
+        tree/ArrayTree.h
+        tree/BinTreeNode.cpp
+        tree/BinTreeNode.h
+        tree/LinkedTree.cpp
+        tree/LinkedTree.h
+        main.cpp search/Search.cpp search/Search.h)
+
+add_executable(algorithm ${SOURCE_FILES})
