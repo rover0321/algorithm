@@ -60,5 +60,7 @@ int main() {
     int a[10] = {0, 3, 5, 8, 11, 33, 78, 96, 114, 238};
     std::cout << Search::sequentialSearch(a, 10, 33) << std::endl;
     std::cout << Search::optimizeSequentialSearch(a, 10, 33) << std::endl;
+    std::cout << Search::binarySearch(a, 10, 33) << std::endl;
+    std::cout << Search::interpolationSearch(a, 10, 33) << std::endl;
     return 0;
 }
