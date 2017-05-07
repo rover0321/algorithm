@@ -8,14 +8,7 @@
 
 class InsertSort {
 public:
-    void insertSort(int* a, int n);
-
-    /**
-     * 打印一下当前数组中所有的数据
-     * @param a
-     * @param n
-     */
-    void print(int *a, int n);
+    static void insertSort(long* a, int n);
 };
 
 

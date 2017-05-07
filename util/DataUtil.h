@@ -7,7 +7,15 @@
 
 
 class DataUtil {
-    int* generateRandomArray(int n);
+public:
+    static long* generateRandomArray(int n);
+
+    /**
+     * 打印一下当前数组中所有的数据
+     * @param a
+     * @param n
+     */
+    static void print(long *a, int n);
 };
 
 

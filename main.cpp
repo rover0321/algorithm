@@ -2,6 +2,9 @@
 #include "tree/ArrayTree.h"
 #include "tree/LinkedTree.h"
 #include "search/Search.h"
+#include "util/DataUtil.h"
+#include "sort/InsertSort.h"
+#include "util/StringUtil.h"
 
 int main() {
     std::cout << "Hello, World!" << std::endl;
@@ -62,5 +65,15 @@ int main() {
     std::cout << Search::optimizeSequentialSearch(a, 10, 33) << std::endl;
     std::cout << Search::binarySearch(a, 10, 33) << std::endl;
     std::cout << Search::interpolationSearch(a, 10, 33) << std::endl;
+
+    int n = 10;
+    long* c = DataUtil::generateRandomArray(n);
+    StringUtil::display("排序前");
+    DataUtil::print(c, n);
+
+    InsertSort::insertSort(c, n);
+    StringUtil::display("排序后");
+    DataUtil::print(c, n);
+    delete[](c);
     return 0;
 }

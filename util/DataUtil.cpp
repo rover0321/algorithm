@@ -3,10 +3,22 @@
 //
 
 #include "DataUtil.h"
+#include <iostream>
 
-int *DataUtil::generateRandomArray(int n) {
+long *DataUtil::generateRandomArray(int n) {
     if (n <= 0){
         return nullptr;
     }
-    int* a = new int(n);
+    long* a = new long(n);
+    for (int i = 0; i < n; i++){
+        a[i] = random();
+    }
+    return a;
+}
+
+void DataUtil::print(long *a, int n) {
+    for (int j = 0; j < n; j++){
+        std::cout << a[j] << " ";
+    }
+    std::cout << std::endl;
 }
