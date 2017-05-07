@@ -10,6 +10,6 @@ set(SOURCE_FILES
         tree/BinTreeNode.h
         tree/LinkedTree.cpp
         tree/LinkedTree.h
-        main.cpp search/Search.cpp search/Search.h)
+        main.cpp search/Search.cpp search/Search.h sort/InsertSort.cpp sort/InsertSort.h util/DataUtil.cpp util/DataUtil.h)
 
 add_executable(algorithm ${SOURCE_FILES})
