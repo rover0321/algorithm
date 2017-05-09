@@ -16,6 +16,14 @@ public:
      * @param n
      */
     static void print(long *a, int n);
+
+    /**
+     * 交换数组指定两个位置的元素
+     * @param a
+     * @param m
+     * @param n
+     */
+    static void swap(long* a, int m, int n);
 };
 
 

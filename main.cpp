@@ -5,6 +5,7 @@
 #include "util/DataUtil.h"
 #include "sort/InsertSort.h"
 #include "util/StringUtil.h"
+#include "sort/SelectionSort.h"
 
 int main() {
     std::cout << "Hello, World!" << std::endl;
@@ -75,5 +76,12 @@ int main() {
     StringUtil::display("排序后");
     DataUtil::print(c, n);
     delete[](c);
+
+    long* d = DataUtil::generateRandomArray(n);
+    StringUtil::display("排序前");
+    DataUtil::print(d, n);
+    SelectionSort::simpleSelectionSort(d, n);
+    StringUtil::display("排序后");
+    DataUtil::print(d, n);
     return 0;
 }

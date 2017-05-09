@@ -22,3 +22,9 @@ void DataUtil::print(long *a, int n) {
     }
     std::cout << std::endl;
 }
+
+void DataUtil::swap(long *a, int m, int n) {
+    long temp = a[m];
+    a[m] = a[n];
+    a[n] = temp;
+}
