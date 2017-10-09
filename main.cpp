@@ -7,6 +7,7 @@
 #include "util/StringUtil.h"
 #include "sort/SelectionSort.h"
 #include "sort/MergeSort.h"
+#include "sort/QuickSort.h"
 
 int main() {
     std::cout << "Hello, World!" << std::endl;
@@ -74,11 +75,20 @@ int main() {
 //    StringUtil::display("排序前");
 //    DataUtil::print(c, n);
 //
+    // 插入排序
 //    InsertSort::insertSort(c, n);
 //    StringUtil::display("排序后");
 //    DataUtil::print(c, n);
+
+    // 合并排序
+//    StringUtil::display("排序前");
+//    MergeSort::mergeSort(c, 0, 7);
+//    StringUtil::display("排序后");
+//    DataUtil::print(c, 0, 7);
+
+    // 快速排序
     StringUtil::display("排序前");
-    MergeSort::mergeSort(c, 0, 7);
+    QuickSort::quickSort(c, 0, 7);
     StringUtil::display("排序后");
     DataUtil::print(c, 0, 7);
 

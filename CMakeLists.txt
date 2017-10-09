@@ -20,6 +20,6 @@ set(SOURCE_FILES
         util/DataUtil.h
         util/StringUtil.cpp
         util/StringUtil.h
-        main.cpp sort/MergeSort.cpp sort/MergeSort.h)
+        main.cpp sort/MergeSort.cpp sort/MergeSort.h sort/QuickSort.cpp sort/QuickSort.h)
 
 add_executable(algorithm ${SOURCE_FILES})
