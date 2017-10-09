@@ -16,8 +16,8 @@ long *DataUtil::generateRandomArray(int n) {
     return a;
 }
 
-void DataUtil::print(long *a, int n) {
-    for (int j = 0; j < n; j++){
+void DataUtil::print(long *a, int low, int high) {
+    for (int j = low; j <= high; j++){
         std::cout << a[j] << " ";
     }
     std::cout << std::endl;

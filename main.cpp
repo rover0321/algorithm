@@ -6,6 +6,7 @@
 #include "sort/InsertSort.h"
 #include "util/StringUtil.h"
 #include "sort/SelectionSort.h"
+#include "sort/MergeSort.h"
 
 int main() {
     std::cout << "Hello, World!" << std::endl;
@@ -67,21 +68,27 @@ int main() {
     std::cout << Search::binarySearch(a, 10, 33) << std::endl;
     std::cout << Search::interpolationSearch(a, 10, 33) << std::endl;
 
-    int n = 10;
-    long* c = DataUtil::generateRandomArray(n);
+    int n = 15;
+//    long* c = DataUtil::generateRandomArray(n);
+    long c[] = {3L, 44L, 38L, 5L, 47L, 15L, 36L, 26L};
+//    StringUtil::display("排序前");
+//    DataUtil::print(c, n);
+//
+//    InsertSort::insertSort(c, n);
+//    StringUtil::display("排序后");
+//    DataUtil::print(c, n);
     StringUtil::display("排序前");
-    DataUtil::print(c, n);
-
-    InsertSort::insertSort(c, n);
+    MergeSort::mergeSort(c, 0, 7);
     StringUtil::display("排序后");
-    DataUtil::print(c, n);
-    delete[](c);
+    DataUtil::print(c, 0, 7);
 
-    long* d = DataUtil::generateRandomArray(n);
-    StringUtil::display("排序前");
-    DataUtil::print(d, n);
-    SelectionSort::simpleSelectionSort(d, n);
-    StringUtil::display("排序后");
-    DataUtil::print(d, n);
+//    delete[](c);
+
+//    long* d = DataUtil::generateRandomArray(n);
+//    StringUtil::display("排序前");
+//    DataUtil::print(d, n);
+//    SelectionSort::simpleSelectionSort(d, n);
+//    StringUtil::display("排序后");
+//    DataUtil::print(d, n);
     return 0;
 }

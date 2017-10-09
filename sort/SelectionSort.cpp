@@ -12,7 +12,7 @@ void SelectionSort::simpleSelectionSort(long *a, int n) {
 
         // 交换两个元素
         DataUtil::swap(a, i, minIndex);
-        DataUtil::print(a, n);
+        DataUtil::print(a, 0, n - 1);
     }
 }
 
