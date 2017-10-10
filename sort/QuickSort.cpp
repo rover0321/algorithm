@@ -22,7 +22,9 @@ int QuickSort::partition(long *a, int i, int j) {
             m++;
             DataUtil::swap(a, k, m);
         }
+        DataUtil::print(a, i, j);
     }
     DataUtil::swap(a, i, m);
+    DataUtil::print(a, i, j);
     return m; // 找到一个S1 和 S2 的分界点 使得 S1中的元素全部小于p同时S2中的元素全部大于等于p
 }
