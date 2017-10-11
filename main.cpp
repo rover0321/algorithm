@@ -8,6 +8,7 @@
 #include "sort/SelectionSort.h"
 #include "sort/MergeSort.h"
 #include "sort/QuickSort.h"
+#include "exercises/stackExercise.h"
 
 int main() {
     std::cout << "Hello, World!" << std::endl;
@@ -100,5 +101,8 @@ int main() {
 //    SelectionSort::simpleSelectionSort(d, n);
 //    StringUtil::display("排序后");
 //    DataUtil::print(d, n);
+
+    std::cout << stackExercise::bracketMatching("sfs{adfal[[dsfasdf]asdfjalsd}");
+
     return 0;
 }
