@@ -19,8 +19,11 @@ int* mysum(int (*pInt)[4]){
     return sum;
 }
 
-int main() {
-    std::cout << "Hello, World!" << std::endl;
+int main(int argc, char* argv[]) {
+    while (argc-- > 1){
+        std::cout << *(++argv) << std::endl;
+    }
+
 
 //    int root = 1;
 //    ArrayTree* tree = new ArrayTree(10, &root);
