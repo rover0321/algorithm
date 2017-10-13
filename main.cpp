@@ -10,6 +10,15 @@
 #include "sort/QuickSort.h"
 #include "exercises/stackExercise.h"
 
+
+int* mysum(int (*pInt)[4]){
+    int* sum = new int();
+    for (int i = 0; i < 4; i++){
+        *sum = *sum + *(*pInt + i);
+    }
+    return sum;
+}
+
 int main() {
     std::cout << "Hello, World!" << std::endl;
 
@@ -102,7 +111,20 @@ int main() {
 //    StringUtil::display("排序后");
 //    DataUtil::print(d, n);
 
-    std::cout << stackExercise::bracketMatching("sfs{adfal[[dsfasdf]asdfjalsd}");
+//    std::cout << stackExercise::bracketMatching("sfs{adfal[[dsfasdf]asdfjalsd}");
 
+    int x[3][4] = {1, 3, 5, 9, 11, 13, 15, 17, 19, 21, 23, 25};
+    int (*pInt)[4] = x + 1; // pInt 是一个指向一维数组的指针。
+    while (pInt++ < x + 3){
+        std::cout << pInt[0][0] << std::endl;
+        std::cout << *(*pInt) << std::endl;
+    }
+
+    std::cout << *mysum(&x[1]) << std::endl;
+
+
+    int* (*pFunc)(int (*pInt)[4]) = mysum;
+    std::cout << *(*pFunc)(x + 1) << std::endl;
     return 0;
 }
+
