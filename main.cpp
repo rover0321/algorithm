@@ -125,6 +125,12 @@ int main(int argc, char* argv[]) {
     DataUtil::print(A, count);
     ListDemo::deleteItem(A, count, 21);
     DataUtil::print(A, count);
+
+
+    PList list = ListDemo::createList(4);
+    ListDemo::displayList(list);
+    ListDemo::displayList(ListDemo::inverseList(list));
+    ListDemo::deleteList(list);
     return 0;
 }
 
