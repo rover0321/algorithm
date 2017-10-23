@@ -28,3 +28,10 @@ void DataUtil::swap(long *a, int m, int n) {
     a[m] = a[n];
     a[n] = temp;
 }
+
+void DataUtil::print(char *a, unsigned int n) {
+    for (int i = 0; i < n; i++){
+        printf("%d ", a[i]);
+    }
+    printf("\n");
+}

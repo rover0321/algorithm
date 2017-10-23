@@ -17,6 +17,9 @@ public:
      */
     static void print(long *a, int low, int high);
 
+
+    static void print(char a[], unsigned int n);
+
     /**
      * 交换数组指定两个位置的元素
      * @param a

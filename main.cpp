@@ -9,15 +9,7 @@
 #include "sort/MergeSort.h"
 #include "sort/QuickSort.h"
 #include "exercises/stackExercise.h"
-
-
-int* mysum(int (*pInt)[4]){
-    int* sum = new int();
-    for (int i = 0; i < 4; i++){
-        *sum = *sum + *(*pInt + i);
-    }
-    return sum;
-}
+#include "list/ListDemo.h"
 
 int main(int argc, char* argv[]) {
     while (argc-- > 1){
@@ -82,16 +74,15 @@ int main(int argc, char* argv[]) {
     std::cout << Search::binarySearch(a, 10, 33) << std::endl;
     std::cout << Search::interpolationSearch(a, 10, 33) << std::endl;
 
-    int n = 15;
 //    long* c = DataUtil::generateRandomArray(n);
     long c[] = {3L, 44L, 38L, 5L, 47L, 15L, 36L, 26L};
 //    StringUtil::display("排序前");
 //    DataUtil::print(c, n);
 //
     // 插入排序
-//    InsertSort::insertSort(c, n);
-//    StringUtil::display("排序后");
-//    DataUtil::print(c, n);
+    InsertSort::insertSort(c, 8);
+    StringUtil::display("排序后");
+    DataUtil::print(c, 0, 7);
 
     // 合并排序
 //    StringUtil::display("排序前");
@@ -100,10 +91,10 @@ int main(int argc, char* argv[]) {
 //    DataUtil::print(c, 0, 7);
 
     // 快速排序
-    StringUtil::display("排序前");
-    QuickSort::quickSort(c, 0, 7);
-    StringUtil::display("排序后");
-    DataUtil::print(c, 0, 7);
+//    StringUtil::display("排序前");
+//    QuickSort::quickSort(c, 0, 7);
+//    StringUtil::display("排序后");
+//    DataUtil::print(c, 0, 7);
 
 //    delete[](c);
 
@@ -116,18 +107,24 @@ int main(int argc, char* argv[]) {
 
 //    std::cout << stackExercise::bracketMatching("sfs{adfal[[dsfasdf]asdfjalsd}");
 
-    int x[3][4] = {1, 3, 5, 9, 11, 13, 15, 17, 19, 21, 23, 25};
-    int (*pInt)[4] = x + 1; // pInt 是一个指向一维数组的指针。
-    while (pInt++ < x + 3){
-        std::cout << pInt[0][0] << std::endl;
-        std::cout << *(*pInt) << std::endl;
-    }
+//    int x[3][4] = {1, 3, 5, 9, 11, 13, 15, 17, 19, 21, 23, 25};
+//    int (*pInt)[4] = x + 1; // pInt 是一个指向一维数组的指针。
+//    while (pInt++ < x + 3){
+//        std::cout << pInt[0][0] << std::endl;
+//        std::cout << *(*pInt) << std::endl;
+//    }
+//
+//    std::cout << *mysum(&x[1]) << std::endl;
+//
+//
+//    int* (*pFunc)(int (*pInt)[4]) = mysum;
+//    std::cout << *(*pFunc)(x + 1) << std::endl;
 
-    std::cout << *mysum(&x[1]) << std::endl;
-
-
-    int* (*pFunc)(int (*pInt)[4]) = mysum;
-    std::cout << *(*pFunc)(x + 1) << std::endl;
+    ElemType A[] = {3, 7, 9, 6, 21, 13, 21, 5};
+    unsigned int count = sizeof A / sizeof A[0]; // This is a standard way to get a length of array.
+    DataUtil::print(A, count);
+    ListDemo::deleteItem(A, count, 21);
+    DataUtil::print(A, count);
     return 0;
 }
 
