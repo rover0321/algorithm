@@ -19,6 +19,7 @@ public:
     static PList createList(unsigned int n);
     static void deleteList(PList list);
     static void displayList(PList list);
+    static void josephus(unsigned int n, unsigned int m, unsigned int k);
 };
 
 

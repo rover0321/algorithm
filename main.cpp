@@ -131,6 +131,8 @@ int main(int argc, char* argv[]) {
     ListDemo::displayList(list);
     ListDemo::displayList(ListDemo::inverseList(list));
     ListDemo::deleteList(list);
+
+    ListDemo::josephus(8, 1, 4);
     return 0;
 }
 

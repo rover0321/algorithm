@@ -66,3 +66,44 @@ void ListDemo::displayList(PList list) {
     }
     printf("\n");
 }
+
+void ListDemo::josephus(unsigned int n, unsigned int m, unsigned int k) {
+    PList p, r, list = nullptr;
+
+    /*Initialize this circle list*/
+    for (int i = 0; i < n; i++){
+        p = (PList)malloc(sizeof(PList));
+        p->data = i;
+        if (list == nullptr){
+            list = p;
+        } else {
+            r->link = p;
+        }
+        r = p;
+    }
+
+    // link tail node to head node as we get a circle link.
+    r->link = list;
+
+    p = list; // p points to the head node.
+
+    for (int i = 1; i < k; i++){
+        r = p;
+        p = p->link;
+    }
+    // p points to the kth node according to the head node.
+
+    while (p->link != p){
+        for (int i = 1; i < m; i++){
+            r = p;
+            p = p->link;
+        }
+        r->link = p->link;
+        printf("%4d", p->data);
+        free(p);
+        p = r->link;
+    }
+
+    printf("\nThe last one node is %4d", p->data);
+    free(p);
+}
