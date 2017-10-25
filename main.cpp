@@ -11,6 +11,7 @@
 #include "exercises/stackExercise.h"
 #include "list/ListDemo.h"
 #include "stack/SequenceStack.h"
+#include "stack/LinkStack.h"
 
 int main(int argc, char* argv[]) {
     while (argc-- > 1){
@@ -145,6 +146,15 @@ int main(int argc, char* argv[]) {
     std::cout << *pSequenceStack->pop() << std::endl;
     std::cout << std::endl << *pSequenceStack->top() << std::endl;
     delete pSequenceStack;
+
+    LinkStack* pLinkStack = new LinkStack();
+    pLinkStack->push('1');
+    pLinkStack->push('2');
+    pLinkStack->push('3');
+    pLinkStack->push('4');
+    pLinkStack->push('5');
+    std::cout << *pLinkStack->top() << *pLinkStack->pop() << std::endl;
+    delete pLinkStack;
     return 0;
 }
 
