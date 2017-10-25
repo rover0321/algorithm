@@ -12,6 +12,7 @@
 #include "list/ListDemo.h"
 #include "stack/SequenceStack.h"
 #include "stack/LinkStack.h"
+#include "queue/SequenceQueue.h"
 
 int main(int argc, char* argv[]) {
     while (argc-- > 1){
@@ -155,6 +156,21 @@ int main(int argc, char* argv[]) {
     pLinkStack->push('5');
     std::cout << *pLinkStack->top() << *pLinkStack->pop() << std::endl;
     delete pLinkStack;
+
+    /**
+     * practise stack
+     */
+    SequenceQueue* pSequenceQueue = new SequenceQueue(4);
+    pSequenceQueue->add('2');
+    pSequenceQueue->add('3');
+    pSequenceQueue->add('8');
+    pSequenceQueue->add('3');
+    pSequenceQueue->add('6');
+
+    std::cout << *pSequenceQueue->remove() << std::endl;
+    std::cout << *pSequenceQueue->remove() << std::endl;
+    std::cout << *pSequenceQueue->remove() << std::endl;
+    std::cout << *pSequenceQueue->remove() << std::endl;
     return 0;
 }
 
