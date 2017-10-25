@@ -10,6 +10,7 @@
 #include "sort/QuickSort.h"
 #include "exercises/stackExercise.h"
 #include "list/ListDemo.h"
+#include "stack/SequenceStack.h"
 
 int main(int argc, char* argv[]) {
     while (argc-- > 1){
@@ -133,6 +134,17 @@ int main(int argc, char* argv[]) {
     ListDemo::deleteList(list);
 
     ListDemo::josephus(8, 1, 4);
+
+
+    SequenceStack* pSequenceStack = new SequenceStack(10);
+    pSequenceStack->push('a');
+    pSequenceStack->push('b');
+    pSequenceStack->push('c');
+    pSequenceStack->push('d');
+    std::cout << std::endl << *pSequenceStack->top() << std::endl;
+    std::cout << *pSequenceStack->pop() << std::endl;
+    std::cout << std::endl << *pSequenceStack->top() << std::endl;
+    delete pSequenceStack;
     return 0;
 }
 
