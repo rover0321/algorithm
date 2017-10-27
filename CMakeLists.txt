@@ -10,16 +10,10 @@ set(SOURCE_FILES
         sort/InsertSort.h
         sort/SelectionSort.cpp
         sort/SelectionSort.h
-        tree/ArrayTree.cpp
-        tree/ArrayTree.h
-        tree/BinTreeNode.cpp
-        tree/BinTreeNode.h
-        tree/LinkedTree.cpp
-        tree/LinkedTree.h
         util/DataUtil.cpp
         util/DataUtil.h
         util/StringUtil.cpp
         util/StringUtil.h
-        main.cpp sort/MergeSort.cpp sort/MergeSort.h sort/QuickSort.cpp sort/QuickSort.h exercises/stackExercise.cpp exercises/stackExercise.h list/ListDemo.cpp list/ListDemo.h stack/SequenceStack.cpp stack/SequenceStack.h stack/LinkStack.cpp stack/LinkStack.h queue/SequenceQueue.cpp queue/SequenceQueue.h)
+        main.cpp sort/MergeSort.cpp sort/MergeSort.h sort/QuickSort.cpp sort/QuickSort.h exercises/stackExercise.cpp exercises/stackExercise.h list/ListDemo.cpp list/ListDemo.h stack/SequenceStack.cpp stack/SequenceStack.h stack/LinkStack.cpp stack/LinkStack.h queue/SequenceQueue.cpp queue/SequenceQueue.h tree/LinkedListBinTree.cpp tree/LinkedListBinTree.h tree/BinTreeNode.cpp tree/BinTreeNode.h)
 
 add_executable(algorithm ${SOURCE_FILES})

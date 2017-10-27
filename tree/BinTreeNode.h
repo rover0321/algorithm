@@ -1,28 +1,17 @@
 //
-// Created by huangxiang on 17-4-16.
+// Created by huangxiang on 2017/10/27.
 //
 
-#ifndef CPP_BINTREENODE_H
-#define CPP_BINTREENODE_H
+#ifndef ALGORITHM_NODE_H
+#define ALGORITHM_NODE_H
 
-
+template <class T>
 class BinTreeNode {
 public:
-    int nodeIndex;
-    BinTreeNode* left;
-    BinTreeNode* right;
-    BinTreeNode* parent;
-    int data;
-
-    BinTreeNode(int nodeIndex, int data);
-    void displayNode();
-    BinTreeNode* searchNode(int nodeIndex);
-    void preOrderTraversal();
-    void inOrderTraversal();
-    void postOrderTraversal();
-
-    virtual ~BinTreeNode();
+    T data;
+    BinTreeNode* lChild;
+    BinTreeNode* rChild;
 };
 
 
-#endif //CPP_BINTREENODE_H
+#endif //ALGORITHM_NODE_H
