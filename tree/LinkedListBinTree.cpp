@@ -38,10 +38,6 @@ void LinkedListBinTree::buildTree() {
     this->__build(&root);
 }
 
-void LinkedListBinTree::distroy() {
-
-}
-
 void LinkedListBinTree::visit(BinTreeNode<char> *node) {
     std::cout << node->data << std::endl;
 }
@@ -67,6 +63,18 @@ void LinkedListBinTree::postOrderTraverse(BinTreeNode<char> *node) {
         postOrderTraverse(node->lChild);
         postOrderTraverse(node->rChild);
         visit(node);
+    }
+}
+
+LinkedListBinTree::~LinkedListBinTree() {
+    destroy(root);
+}
+
+void LinkedListBinTree::destroy(BinTreeNode<char> *node) {
+    if (node != nullptr){
+        destroy(node->lChild);
+        destroy(node->rChild);
+        free(node);
     }
 }
 
