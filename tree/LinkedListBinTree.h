@@ -15,6 +15,7 @@ public:
     explicit LinkedListBinTree();
     void buildTree();
     ~LinkedListBinTree();
+    void inOrderTraverseInNonRecursiveWay();
 
 private:
     void __build(BinTreeNode<char> **tree);

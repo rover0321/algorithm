@@ -66,6 +66,8 @@ int main(int argc, char* argv[]) {
     std::cout << "---------------------------------" << std::endl;
     binTree->inOrderTraverse();
     std::cout << "---------------------------------" << std::endl;
+    binTree->inOrderTraverseInNonRecursiveWay();
+    std::cout << "---------------------------------" << std::endl;
     binTree->postOrderTraverse();
     delete binTree;
     return 0;

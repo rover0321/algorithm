@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include <stack>
 #include "LinkedListBinTree.h"
 void LinkedListBinTree::preOrderTraverse() {
     preOrderTraverse(root);
@@ -76,5 +77,23 @@ void LinkedListBinTree::destroy(BinTreeNode<char> *node) {
         destroy(node->rChild);
         free(node);
     }
+}
+
+void LinkedListBinTree::inOrderTraverseInNonRecursiveWay() {
+    BinTreeNode<char>* p = this->root;
+    std::stack<BinTreeNode<char>*> __stack = std::stack<BinTreeNode<char>*>();
+
+    do {
+        while (p != nullptr){
+            __stack.push(p);
+            p = p->lChild;
+        }
+
+        p = __stack.top();
+        __stack.pop();
+        visit(p);
+        p = p->rChild;
+
+    } while(!(p == nullptr && __stack.empty()));
 }
 
