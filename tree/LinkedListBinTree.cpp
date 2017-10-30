@@ -97,3 +97,17 @@ void LinkedListBinTree::inOrderTraverseInNonRecursiveWay() {
     } while(!(p == nullptr && __stack.empty()));
 }
 
+void LinkedListBinTree::preOrderTraverseInNonRecursiveWay() {
+    BinTreeNode<char>* p = this->root;
+    std::stack<BinTreeNode<char>*> __stack = std::stack<BinTreeNode<char>*>();
+    do {
+        while (p != nullptr){
+            visit(p);
+            __stack.push(p);
+            p = p->lChild;
+        }
+        p = __stack.top();
+        __stack.pop();
+        p = p->rChild;
+    } while (!(p == nullptr && __stack.empty()));
+}

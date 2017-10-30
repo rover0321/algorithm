@@ -64,6 +64,10 @@ int main(int argc, char* argv[]) {
     binTree->buildTree();
     binTree->preOrderTraverse();
     std::cout << "---------------------------------" << std::endl;
+
+    binTree->preOrderTraverseInNonRecursiveWay();
+    std::cout << "---------------------------------" << std::endl;
+
     binTree->inOrderTraverse();
     std::cout << "---------------------------------" << std::endl;
     binTree->inOrderTraverseInNonRecursiveWay();
