@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <stack>
+#include <queue>
 #include "LinkedListBinTree.h"
 void LinkedListBinTree::preOrderTraverse() {
     preOrderTraverse(root);
@@ -110,4 +111,22 @@ void LinkedListBinTree::preOrderTraverseInNonRecursiveWay() {
         __stack.pop();
         p = p->rChild;
     } while (!(p == nullptr && __stack.empty()));
+}
+
+void LinkedListBinTree::layerOrderTraverseInNonRecursiveWay() {
+    std::queue<BinTreeNode<char>*> __queue = std::queue<BinTreeNode<char>*>();
+    __queue.push(this->root);
+
+    while(!__queue.empty()) {
+        BinTreeNode<char>* p = __queue.front();
+        __queue.pop();
+        visit(p);
+        if (p->lChild != nullptr){
+            __queue.push(p->lChild);
+        }
+
+        if (p->rChild != nullptr){
+            __queue.push(p->rChild);
+        }
+    }
 }

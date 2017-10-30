@@ -73,6 +73,9 @@ int main(int argc, char* argv[]) {
     binTree->inOrderTraverseInNonRecursiveWay();
     std::cout << "---------------------------------" << std::endl;
     binTree->postOrderTraverse();
+
+    std::cout << "---------------------------------" << std::endl;
+    binTree->layerOrderTraverseInNonRecursiveWay();
     delete binTree;
     return 0;
 }
